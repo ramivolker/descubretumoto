@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre tu Moto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="body-filter-layer">
+    <div id="container-title">
+        <h1 id="title">Descubre tu motocicleta soñada</h1>
+        <p id="description">¡Rellena el formulario completando todos los campos y descubre la mejor moto para tus necesidades!</p>
+    </div>
+    <div id="container-form">
+    <form id="survey-form">
+        <label id="name-label" for="name" class="label-s1">Nombre</label>
+        <input id="name" type="text" placeholder="Escribe tu nombre" class="input-s1" maxlength="100" required>
+        <label id="email-label" for="email" class="label-s1">Correo Electrónico</label>
+        <input id="email" type="email" placeholder="Escribe tu correo electrónico" class="input-s1" maxlength="100" required>
+        <label id="number-label" for="number" class="label-s1">Edad</label>
+        <input id="number" type="number" min="5" max="99" placeholder="Ingresa tu edad" class="input-s1">
+        <select id="dropdown" name="cilindrada">ananashe
+            <option selected disabled>Escoge la cilindrada</option>
+            <option value="chica">50-110cc</option>
+            <option value="110cc">110cc</option>
+            <option value="125cc">125cc</option>
+            <option value="150cc">150cc</option>
+            <option value="200cc">200cc</option>
+            <option value="250cc">250cc</option>
+            <option value="300cc">300cc</option>
+            <option value="400cc">400cc</option>
+            <option value="500cc">500cc</option>
+            <option value="600cc">600cc</option>
+            <option value="750cc">750cc</option>
+            <option value="900-1000cc">900-1000cc</option>
+            <option value="+1000cc">+1000cc</option>
+        </select>
+        <label id="mailtext" for="">¿Deseas recibir noticias sobre nuevas motocicletas en tu correo electrónico?</label>
+        <div id="radios-container">
+        <label class="checkbox-label">Sí
+        <input type="radio" name="mail" value="si" class="form-radio" checked>
+        </label>
+        <label class="checkbox-label">No
+        <input type="radio" name="mail" value="no" class="form-radio">
+        </label>
+        </div>
+
+        <label for="" class="choose-label">Elige los tipos de motos que te gustan</label>
+
+    <div id="checkboxes-container">
+        <label class="checkbox-label">  <input type="checkbox" value="scooters" id="tipo-scooters" class="checkboxes"> Scooters</label>
+        <label class="checkbox-label">  <input type="checkbox" value="economicas" id="tipo-economicas" class="checkboxes"> Económicas</label>
+        <label class="checkbox-label">  <input type="checkbox" value="street" id="tipo-street" class="checkboxes"> Street</label>
+        <label class="checkbox-label">  <input type="checkbox" value="touring" id="tipo-touring" class="checkboxes"> Touring</label>
+        <label class="checkbox-label">  <input type="checkbox" value="deportivas" id="tipo-deportivas" class="checkboxes"> Deportivas</label>
+        <label class="checkbox-label">  <input type="checkbox" value="choperas" id="tipo-choperas" class="checkboxes"> Choperas</label>
+        <label class="checkbox-label">  <input type="checkbox" value="enduro" id="tipo-enduro" class="checkboxes"> Enduro</label>
+        <label class="checkbox-label">  <input type="checkbox" value="electrica" id="tipo-electrica" class="checkboxes"> Eléctricas</label>
+    </div>
+
+        <label for="" id="feedback-label">Dejanos tu comentario.</label>
+        <textarea maxlength="400" placeholder="Escribe tu comentario de retroalimentación (máx 400 carácteres)" id="textarea-input"></textarea>
+        <input type="submit" id="submit" value="Listo">
+    </form>
+    </div>
+</div>
+</body>
+</html>
