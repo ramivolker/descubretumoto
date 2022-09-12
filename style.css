@@ -240,3 +240,15 @@ form label{
     resize: none;
     height: 8rem;
 }
+
+@media screen and (max-width: 900px) {
+    #container-title{
+        width: 580px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    h1, #description{
+        text-align: center;
+    }
+    
+}
