@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Edu+NSW+ACT+Foundation&family=Montserrat:wght@400;700&family=Oswald:wght@200;500&family=Roboto:ital,wght@0,400;0,500;1,300&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+:root{
+    --principal: rgb(88, 255, 96);
+    --secundario: green;
+    --terciario: rgba(88, 255, 96, 0.1);
+    --cuarto: rgb(21, 59, 23);
+}
+/* 
+COLORES: 
+    VERDES
 
+    --principal: rgb(88, 255, 96);
+    --secundario: green;
+    --terciario: rgba(88, 255, 96, 0.1);
+    --cuarto: rgba
+
+    ROJOS
+    --principal: rgb(255, 0, 0);
+    --secundario: rgb(139, 0, 0);
+    --terciario: rgba(139, 0, 0, 0.2);
+    --cuarto: rgb(255, 205, 205);
+*/
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +29,7 @@ body{
     width: 100%;
     height: 100%;
     background-image: url(wallpaper-moto2.jpg);
-    background-color: green;
+    background-color: var(--secundario);
     position: absolute;
     background-size:cover;
     background-repeat: no-repeat;
@@ -37,7 +57,7 @@ body::before{
 #body-filter-layer::before{
     content: "";
     position: fixed;
-    background-color: rgba(88, 255, 96, 0.1);
+    background-color: var(--terciario);
     top: 0;
     left:0;
     z-index: -1;
@@ -49,11 +69,11 @@ body::before{
 h1{
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-weight: 600;
-    color: rgb(88, 255, 96);
+    color: var(--principal);
     padding: 15px;
     text-emphasis: 1px black;
     font-size: 2.3rem;
-    text-shadow: 0 0 2px rgb(88, 255, 96);
+    text-shadow: 0 0 2px var(--principal);
 }
 
 #description{
@@ -82,7 +102,7 @@ form{
 }
 
 form label{
-    color:rgb(88, 255, 96);
+    color:var(--principal);
     font-family: Roboto, Source Sans Pro, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -97,8 +117,8 @@ form label{
 }
 
 #submit {
-    background-color:rgb(88, 255, 96);
-    color: rgb(20, 59, 22);
+    background-color:var(--principal);
+    color: var(--cuarto);
     cursor: pointer;
     transition: all ease 0.3s;
     align-self: center;
@@ -112,15 +132,15 @@ form label{
 }
 
 #submit:hover {
-    background-color: rgb(57, 170, 63);
-    box-shadow: 0 0 5px rgb(88, 255, 96);
-    color: rgb(40, 119, 45);
+    background-color: var(--principal);
+    box-shadow: 0 0 5px var(--principal);
+    color: var(--cuarto);
 }
 
 .label-s1{
     padding: 3px 10px;
     padding-top: 0;
-    color: rgb(88, 255, 96);
+    color: var(--principal);
 }
 
 .input-s1{
@@ -135,6 +155,7 @@ form label{
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.2rem;
     color: rgb(212, 212, 212);
+    width: calc(100% - 20px);
 }
 
 .input-s1 ::placeholder{
@@ -150,13 +171,14 @@ form label{
 #dropdown{
     outline: none;
     background-color: black;
-    color: rgb(88, 255, 96);
+    color: var(--principal);
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-shadow: none;
     padding: 10px;
-    border: 1px solid rgb(88, 255, 96);
+    border: 1px solid var(--principal);
     font-size: 1rem;
     margin: 0.5rem 0;
+    width: 100%;
 }
 
 #dropdown option{
@@ -200,7 +222,7 @@ form label{
     text-align: center;
     font-size: 1.3rem;
     margin: 0 auto 1rem;
-    border-top: 1px solid rgb(88, 255, 96);
+    border-top: 1px solid var(--principal);
     padding-top: 1rem;
     width: 85%;
 }
@@ -213,7 +235,7 @@ form label{
 
 .checkboxes{
     display: inline-block;
-    color: rgb(88, 255, 96);
+    color: var(--principal);
     width: 1rem;
     height: 1rem;
     margin: 0 0.5rem 0;
@@ -224,7 +246,7 @@ form label{
 #feedback-label{
     align-self: center;
     margin: 0.6rem 0 1rem;
-    border-top: 1px solid rgb(88, 255, 96);
+    border-top: 1px solid var(--principal);
     width: 85%;
     text-align: center;
     padding-top: 0.7rem;
@@ -243,13 +265,17 @@ form label{
 
 @media screen and (max-width: 900px) {
     #container-title{
-        width: 580px;
+        width: 100vw;
         border-radius: 0;
         margin: 0 auto 0;
+        align-self: center;
     }
 
     h1, #description{
         text-align: center;
     }
-    
+    form{
+        width: calc(100vw - 40px);
+        padding: 20px;
+    }
 }
